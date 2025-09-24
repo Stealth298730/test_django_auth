@@ -51,3 +51,5 @@ def logout_func(request):
         logout(request)
         messages.success(request,"Ви успішно ввійшли")
         return redirect("sign_in")
+
+
