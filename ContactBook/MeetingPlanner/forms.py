@@ -40,4 +40,5 @@ class PlannerForm(forms.ModelForm):
 
     class Meta:
         model = Planner
-        fields = ["user","date","time","title","address","link"]
+        #fields = ["contact","date","time","title","address","link"]
+        exclude = ["user"]
