@@ -19,6 +19,7 @@ LOGIN_URL = "/sign_in/"
 #STATIC_URL="static/"
 MEDIA_ROOT= BASE_DIR/"images/"
 MEDIA_URL="/images/"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/

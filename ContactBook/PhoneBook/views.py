@@ -27,9 +27,11 @@ def add_contact(request):
 
 @login_required()
 def get_contacts(request:HttpRequest):
+    print(request.COOKIES)
     contacts = Contact.objects.filter(user=request.user).all()
-    return render(request=request,template_name="contacts.html",context=dict(contacts=contacts))
-
+    response = render(request=request,template_name="contacts.html",context=dict(contacts=contacts))
+    response.set_cookie("my_super_cookie", "Hello world!",  max_age=30,path="/planners/")
+    return response
 
 
 @login_required

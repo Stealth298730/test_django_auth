@@ -45,6 +45,7 @@ def sign_in(request):
     
 @login_required(login_url="/sign_in/")
 def index(request):
+    print(request.COOKIES)
     return render(request=request,template_name="index.html")
 
 
